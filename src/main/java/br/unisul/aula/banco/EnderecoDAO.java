@@ -45,6 +45,14 @@ public class EnderecoDAO {
                 .createQuery("SELECT e FROM Endereco e where e.cep =:cep", Endereco.class);
         return query.setParameter("cep", cep).getSingleResult();
     }
+
+    public Endereco findByCidade(String cidade){
+        EntityManager entityManager = JPAUtil.getEntityManager();
+        TypedQuery<Endereco> query = entityManager
+                .createQuery("SELECT e FROM Endereco e where e.cidade =:cidade", Endereco.class);
+        return query.setParameter("cidade", cidade).getSingleResult();
+    }
+
     public Endereco findById(Long id) {
         EntityManager entityManager = JPAUtil.getEntityManager();
         TypedQuery<Endereco> query = entityManager
