@@ -1,0 +1,37 @@
+.formsearch {
+  height: 30em;
+  background-color: #3F444F;
+  display: flex;
+  color: white;
+  font-size: 17px;
+  justify-content: center;
+  align-items: center;
+  min-height: 650px;
+}
+
+.size-large {
+  width: 300px;
+}
+.btn-search {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.btn-clear {
+  margin: 15px auto;
+  width: 150px;
+}
+
+.city-name {
+  font-size: 35px;
+  color: white;
+  font-family: monospace;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.table {
+  color: white !important;
+  background-color: #282c34;
+  min-width: 250px;
+}
