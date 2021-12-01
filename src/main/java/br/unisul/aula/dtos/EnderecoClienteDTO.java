@@ -9,13 +9,13 @@ import java.util.List;
 
 public class EnderecoClienteDTO {
     private List<ClienteEnd> clientes;
-    private String cidadeEndereco;
-    private String ufEndereco;
+    private String cidade;
+    private String uf;
 
     public EnderecoClienteDTO(Endereco endereco, List<Cliente> listaClientes) {
         this.clientes = converterParaClienteEnd(listaClientes);
-        this.cidadeEndereco = endereco.getCidade();
-        this.ufEndereco = endereco.getUf().name();
+        this.cidade = endereco.getCidade();
+        this.uf = endereco.getUf().name();
     }
 
     public EnderecoClienteDTO() {
@@ -43,27 +43,27 @@ public class EnderecoClienteDTO {
     }
 
     public String getCidadeEndereco() {
-        return cidadeEndereco;
+        return cidade;
     }
 
-    public void setCidadeEndereco(String cidadeEndereco) {
-        this.cidadeEndereco = cidadeEndereco;
+    public void setCidadeEndereco(String cidade) {
+        this.cidade = cidade;
     }
 
     public String getUfEndereco() {
-        return ufEndereco;
+        return uf;
     }
 
-    public void setUfEndereco(String ufEndereco) {
-        this.ufEndereco = ufEndereco;
+    public void setUfEndereco(String uf) {
+        this.uf = uf;
     }
 
     @Override
     public String toString() {
         return "EnderecoClienteDTO{" +
                 ", clientes='" + clientes + '\'' +
-                ", cidadeEndereco='" + cidadeEndereco + '\'' +
-                ", ufEndereco='" + ufEndereco + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", uf='" + uf + '\'' +
                 '}';
     }
 }
